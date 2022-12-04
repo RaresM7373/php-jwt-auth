@@ -10,11 +10,22 @@ services:
       MYSQL_ALLOW_EMPTY_PASSWORD: 1
 
   www:
-    image: php:8.1-apache-buster
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - ./src:/var/www/html
     ports:
       - 8080:80
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./api:/var/www/html
+    ports:
+      - 8081:80
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
