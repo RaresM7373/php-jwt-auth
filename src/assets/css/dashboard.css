@@ -1,0 +1,71 @@
+.screen-content {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+#content-container {
+  flex: 1;
+  height: 100%;
+  padding: 68px;
+  background-color: #e9eff2;
+}
+
+#content-container .title {
+  font-family: "Pacifico", sans-serif;
+}
+
+#content-container .title span {
+  color: #3552d4;
+}
+
+input:not(.btn) {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f9fbfc;
+  background: #f9fbfc;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease 0s;
+  color: #212325;
+  margin-bottom: 16px;
+}
+
+input:focus:not(.btn) {
+  border-color: #3461fd;
+  box-shadow: 0 0 0 3px #3461fd80;
+}
+
+.mbtn {
+  width: 100%;
+  display: block;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border: 1px solid #3461fd;
+  background-color: #3461fd;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease 0s;
+  color: #e9eff2;
+  cursor: pointer;
+  box-shadow: 0px 3px 5px 0px #3461fd40;
+  outline: none;
+  border: none;
+}
+
+.mbtn:hover,
+.mbtn:focus {
+  background: #3461fddd;
+  border-color: #3461fddd;
+  box-shadow: 0px 3px 5px 0px #3461fd40, 0 0 0 3px #3461fd80;
+}
+
+.error-text {
+  color: red;
+}
+
+.inputs-container {
+  max-width: 600px;
+  margin-top: 48px;
+}

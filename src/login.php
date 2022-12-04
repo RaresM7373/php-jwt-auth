@@ -23,8 +23,8 @@
     $( "#register-form" ).submit(function( event ) {
       event.preventDefault();
 
-      const email = $('#email').val()
-      const password = $('#password').val()
+      const email = $('#email').val();
+      const password = $('#password').val();
 
       $.ajax({
         type: "POST",
@@ -35,7 +35,8 @@
         },
         success: function(data, status) {
           if(status === 'success') {
-            // window.location.replace("http://localhost:8080/dashboard.php");
+            localStorage.setItem('access_token', data);
+            window.location.replace("http://localhost:8080/dashboard.php");
           } else {
             alert('A aparut o problema');
           }

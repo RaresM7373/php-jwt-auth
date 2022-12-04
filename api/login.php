@@ -21,13 +21,7 @@ if($email && $password) {
 
   $hashPassword = $row[3];
 
-  echo $password;
-  echo "\n";
-  echo $hashPassword;
-  echo "\n";
-  echo trim($hashPassword, " ");
-
-  if( password_verify("parola", "$2y$10$1C1P2K/rf3BrusEzUz9AAugJlHOD3lYQbkycE5T1ZCQHG8blfSCyG")) {
+  if(password_verify('parola', $hashPassword)) {
     $secretKey  = 'JWT_SECRET_KEY';
     $issuedAt   = new DateTimeImmutable();
     $expire     = $issuedAt->modify('+30 minutes')->getTimestamp();      
@@ -42,7 +36,6 @@ if($email && $password) {
       'userName' => $username,
     ];
     
-    echo 'Hello';
     echo JWT::encode(
       $data,
       $secretKey,

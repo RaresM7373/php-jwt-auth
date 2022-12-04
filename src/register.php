@@ -28,7 +28,9 @@
       const firstName = $('#firstName').val()
       const lastName = $('#lastName').val()
       const email = $('#email').val()
-      const password = $('#firstName').val()
+      const password = $('#password').val()
+
+      console.log("Password is ", password)
 
       $.ajax({
         type: "POST",

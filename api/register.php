@@ -29,7 +29,7 @@ $result =  $stmt->execute();
 echo $hash;
 
 // echo $result;
-$stmt.close();
-$conn.close();
+$stmt->close();
+$conn->close();
 ?>
 
